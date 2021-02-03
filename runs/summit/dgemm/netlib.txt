@@ -1,0 +1,6 @@
+jsrun -n1 -a1 -c42 -g0 -bpacked:42 -EOMP_NUM_THREADS=1 Rscript dgemm.R 4096 40960 4096 1 NETLIB Threads=1 From 4096 To 40960 Step=4096 Loops=1
+      SIZE             Flops                   Time
+         4096x4096 :    2355.10 MFlops  58.358000 sec
+         8192x8192 :    2353.56 MFlops 467.169000 sec
+       12288x12288 :    2358.57 MFlops 1573.347000 sec
+       16384x16384 :    2360.66 MFlops 3726.122000 sec

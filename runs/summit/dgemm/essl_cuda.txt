@@ -1,0 +1,48 @@
+jsrun -n1 -a1 -c21 -g4 -bpacked:21 -EOMP_NUM_THREADS=8 Rscript dgemm.R 4096 40960 4096 1 ESSLSMPCUDA ngpu=4 From 4096 To 40960 Step=4096 Loops=1
+      SIZE             Flops                   Time
+         4096x4096 :   67043.39 MFlops   2.050000 sec
+         8192x8192 : 2568952.40 MFlops   0.428000 sec
+       12288x12288 : 3935155.61 MFlops   0.943000 sec
+       16384x16384 : 5125928.33 MFlops   1.716000 sec
+       20480x20480 : 5433228.71 MFlops   3.162000 sec
+       24576x24576 : 6179603.24 MFlops   4.804000 sec
+       28672x28672 : 7120006.20 MFlops   6.621000 sec
+       32768x32768 : 8453717.46 MFlops   8.324000 sec
+       36864x36864 : 8967421.20 MFlops  11.173000 sec
+       40960x40960 : 9293322.97 MFlops  14.789000 sec
+jsrun -n1 -a1 -c21 -g3 -bpacked:21 -EOMP_NUM_THREADS=8 Rscript dgemm.R 4096 40960 4096 1 ESSLSMPCUDA ngpu=3 From 4096 To 40960 Step=4096 Loops=1
+      SIZE             Flops                   Time
+         4096x4096 :   94916.40 MFlops   1.448000 sec
+         8192x8192 : 7003258.78 MFlops   0.157000 sec
+       12288x12288 : 10307921.51 MFlops   0.360000 sec
+       16384x16384 : 12785018.93 MFlops   0.688000 sec
+       20480x20480 : 15230380.48 MFlops   1.128000 sec
+       24576x24576 : 16781692.45 MFlops   1.769000 sec
+       28672x28672 : 17350592.95 MFlops   2.717000 sec
+       32768x32768 : 16899314.16 MFlops   4.164000 sec
+       36864x36864 : 18472160.23 MFlops   5.424000 sec
+       40960x40960 : 19006908.24 MFlops   7.231000 sec
+jsrun -n1 -a1 -c21 -g2 -bpacked:21 -EOMP_NUM_THREADS=8 Rscript dgemm.R 4096 40960 4096 1 ESSLSMPCUDA ngpu=2 From 4096 To 40960 Step=4096 Loops=1
+      SIZE             Flops                   Time
+         4096x4096 :  147942.90 MFlops   0.929000 sec
+         8192x8192 : 6704339.19 MFlops   0.164000 sec
+       12288x12288 : 8856448.08 MFlops   0.419000 sec
+       16384x16384 : 11148406.87 MFlops   0.789000 sec
+       20480x20480 : 12030720.72 MFlops   1.428000 sec
+       24576x24576 : 12589827.80 MFlops   2.358000 sec
+       28672x28672 : 12968792.58 MFlops   3.635000 sec
+       32768x32768 : 12796643.79 MFlops   5.499000 sec
+       36864x36864 : 13387626.55 MFlops   7.484000 sec
+       40960x40960 : 13601083.97 MFlops  10.105000 sec
+jsrun -n1 -a1 -c21 -g1 -bpacked:21 -EOMP_NUM_THREADS=8 Rscript dgemm.R 4096 40960 4096 1 ESSLSMPCUDA ngpu=1 From 4096 To 40960 Step=4096 Loops=1
+      SIZE             Flops                   Time
+         4096x4096 :  176203.79 MFlops   0.780000 sec
+         8192x8192 : 4822419.42 MFlops   0.228000 sec
+       12288x12288 : 5717799.30 MFlops   0.649000 sec
+       16384x16384 : 6392509.46 MFlops   1.376000 sec
+       20480x20480 : 6822823.35 MFlops   2.518000 sec
+       24576x24576 : 6915167.47 MFlops   4.293000 sec
+       28672x28672 : 7079375.44 MFlops   6.659000 sec
+       32768x32768 : 7105800.68 MFlops   9.903000 sec
+       36864x36864 : 7150513.64 MFlops  14.012000 sec
+       40960x40960 : 7295061.22 MFlops  18.840000 sec

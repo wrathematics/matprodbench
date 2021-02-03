@@ -1,0 +1,62 @@
+jsrun -n1 -a1 -c42 -g0 -bpacked:42 -EOMP_NUM_THREADS=42 Rscript dgemm.R 4096 40960 4096 1 ESSLSMP Threads=42 From 4096 To 40960 Step=4096 Loops=1
+      SIZE             Flops                   Time
+         4096x4096 :  286928.92 MFlops   0.479000 sec
+         8192x8192 :  733496.75 MFlops   1.499000 sec
+       12288x12288 :  759797.65 MFlops   4.884000 sec
+       16384x16384 :  760512.97 MFlops  11.566000 sec
+       20480x20480 :  774635.64 MFlops  22.178000 sec
+       24576x24576 :  769806.40 MFlops  38.564000 sec
+       28672x28672 :  768666.72 MFlops  61.329000 sec
+       32768x32768 :  767698.11 MFlops  91.662000 sec
+       36864x36864 :  776040.19 MFlops 129.108000 sec
+       40960x40960 :  767125.40 MFlops 179.161000 sec
+jsrun -n1 -a1 -c42 -g0 -bpacked:42 -EOMP_NUM_THREADS=32 Rscript dgemm.R 4096 40960 4096 1 ESSLSMP Threads=32 From 4096 To 40960 Step=4096 Loops=1
+      SIZE             Flops                   Time
+         4096x4096 :  520602.10 MFlops   0.264000 sec
+         8192x8192 :  575660.54 MFlops   1.910000 sec
+       12288x12288 :  592787.82 MFlops   6.260000 sec
+       16384x16384 :  583759.82 MFlops  15.068000 sec
+       20480x20480 :  591308.23 MFlops  29.054000 sec
+       24576x24576 :  591594.71 MFlops  50.181000 sec
+       28672x28672 :  590539.17 MFlops  79.828000 sec
+       32768x32768 :  589787.65 MFlops 119.312000 sec
+       36864x36864 :  591321.93 MFlops 169.439000 sec
+       40960x40960 :  594569.72 MFlops 231.157000 sec
+jsrun -n1 -a1 -c42 -g0 -bpacked:42 -EOMP_NUM_THREADS=16 Rscript dgemm.R 4096 40960 4096 1 ESSLSMP Threads=16 From 4096 To 40960 Step=4096 Loops=1
+      SIZE             Flops                   Time
+         4096x4096 :  292423.31 MFlops   0.470000 sec
+         8192x8192 :  312006.70 MFlops   3.524000 sec
+       12288x12288 :  316814.80 MFlops  11.713000 sec
+       16384x16384 :  315928.92 MFlops  27.842000 sec
+       20480x20480 :  318582.30 MFlops  53.926000 sec
+       24576x24576 :  318227.57 MFlops  93.288000 sec
+       28672x28672 :  319424.06 MFlops 147.583000 sec
+       32768x32768 :  318811.65 MFlops 220.722000 sec
+       36864x36864 :  320089.06 MFlops 313.016000 sec
+       40960x40960 :  319194.93 MFlops 430.580000 sec
+jsrun -n1 -a1 -c42 -g0 -bpacked:42 -EOMP_NUM_THREADS=8 Rscript dgemm.R 4096 40960 4096 1 ESSLSMP Threads=8 From 4096 To 40960 Step=4096 Loops=1
+      SIZE             Flops                   Time
+         4096x4096 :  155650.00 MFlops   0.883000 sec
+         8192x8192 :  160138.60 MFlops   6.866000 sec
+       12288x12288 :  162407.62 MFlops  22.849000 sec
+       16384x16384 :  161597.83 MFlops  54.432000 sec
+       20480x20480 :  162537.32 MFlops 105.698000 sec
+       24576x24576 :  162317.93 MFlops 182.893000 sec
+       28672x28672 :  162690.63 MFlops 289.762000 sec
+jsrun -n1 -a1 -c42 -g0 -bpacked:42 -EOMP_NUM_THREADS=2 Rscript dgemm.R 4096 40960 4096 1 ESSLSMP Threads=2 From 4096 To 40960 Step=4096 Loops=1
+      SIZE             Flops                   Time
+         4096x4096 :   40783.07 MFlops   3.370000 sec
+         8192x8192 :   41819.25 MFlops  26.292000 sec
+       12288x12288 :   42158.71 MFlops  88.021000 sec
+       16384x16384 :   41997.15 MFlops 209.445000 sec
+       20480x20480 :   42186.31 MFlops 407.238000 sec
+       24576x24576 :   42042.76 MFlops 706.110000 sec
+       28672x28672 :   42189.79 MFlops 1117.369000 sec
+       32768x32768 :   42007.50 MFlops 1675.147000 sec
+jsrun -n1 -a1 -c42 -g0 -bpacked:42 -EOMP_NUM_THREADS=1 Rscript dgemm.R 4096 40960 4096 1 ESSLSMP Threads=1 From 4096 To 40960 Step=4096 Loops=1
+      SIZE             Flops                   Time
+         4096x4096 :   21616.70 MFlops   6.358000 sec
+         8192x8192 :   21572.16 MFlops  50.969000 sec
+       12288x12288 :   21697.46 MFlops 171.027000 sec
+       16384x16384 :   21644.46 MFlops 406.390000 sec
+       20480x20480 :   21717.39 MFlops 791.065000 sec

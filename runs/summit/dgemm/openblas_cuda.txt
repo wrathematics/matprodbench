@@ -1,0 +1,192 @@
+jsrun -n1 -a1 -c21 -g4 -bpacked:21 -ENVBLAS_CONFIG_FILE=/gpfs/alpine/stf011/scratch/mikem/nvblas_1024.conf -ELD_PRELOAD=/sw/summit/cuda/11.1.0/lib64/libnvblas.so -EOMP_NUM_THREADS=8 Rscript dgemm.R 4096 40960 4096 1 Tile 1024 ngpu=4 
+      SIZE             Flops                   Time
+         4096x4096 : 2181570.69 MFlops   0.063000 sec
+         8192x8192 : 3752599.41 MFlops   0.293000 sec
+       12288x12288 : 6476181.05 MFlops   0.573000 sec
+       16384x16384 : 5715460.05 MFlops   1.539000 sec
+       20480x20480 : 5305703.89 MFlops   3.238000 sec
+       24576x24576 : 4011731.61 MFlops   7.400000 sec
+       28672x28672 : 2650188.95 MFlops  17.788000 sec
+       32768x32768 : 1306390.87 MFlops  53.865000 sec
+       36864x36864 : 1276750.52 MFlops  78.475000 sec
+       40960x40960 : 1029281.68 MFlops 133.529000 sec 
+jsrun -n1 -a1 -c21 -g4 -bpacked:21 -ENVBLAS_CONFIG_FILE=/gpfs/alpine/stf011/scratch/mikem/nvblas_2048.conf -ELD_PRELOAD=/sw/summit/cuda/11.1.0/lib64/libnvblas.so -EOMP_NUM_THREADS=8 Rscript dgemm.R 4096 40960 4096 1 Tile 2048 ngpu=4 
+      SIZE             Flops                   Time
+         4096x4096 : 1616928.86 MFlops   0.085000 sec
+         8192x8192 : 3535407.16 MFlops   0.311000 sec
+       12288x12288 : 9323748.10 MFlops   0.398000 sec
+       16384x16384 : 11064267.95 MFlops   0.795000 sec
+       20480x20480 : 11848185.64 MFlops   1.450000 sec
+       24576x24576 : 12611220.88 MFlops   2.354000 sec
+       28672x28672 : 11674482.67 MFlops   4.038000 sec
+       32768x32768 : 8835854.37 MFlops   7.964000 sec
+       36864x36864 : 7860123.72 MFlops  12.747000 sec
+       40960x40960 : 8677797.29 MFlops  15.838000 sec 
+jsrun -n1 -a1 -c21 -g4 -bpacked:21 -ENVBLAS_CONFIG_FILE=/gpfs/alpine/stf011/scratch/mikem/nvblas_4096.conf -ELD_PRELOAD=/sw/summit/cuda/11.1.0/lib64/libnvblas.so -EOMP_NUM_THREADS=8 Rscript dgemm.R 4096 40960 4096 1 Tile 4096 ngpu=4 
+      SIZE             Flops                   Time
+         4096x4096 :  838042.40 MFlops   0.164000 sec
+         8192x8192 : 3114763.82 MFlops   0.353000 sec
+       12288x12288 : 8963410.01 MFlops   0.414000 sec
+       16384x16384 : 13616243.07 MFlops   0.646000 sec
+       20480x20480 : 15833980.81 MFlops   1.085000 sec
+       24576x24576 : 18993483.01 MFlops   1.563000 sec
+       28672x28672 : 18479639.77 MFlops   2.551000 sec
+       32768x32768 : 17873696.77 MFlops   3.937000 sec
+       36864x36864 : 21696188.19 MFlops   4.618000 sec
+       40960x40960 : 17577561.51 MFlops   7.819000 sec
+jsrun -n1 -a1 -c21 -g4 -bpacked:21 -ENVBLAS_CONFIG_FILE=/gpfs/alpine/stf011/scratch/mikem/nvblas_8192.conf -ELD_PRELOAD=/sw/summit/cuda/11.1.0/lib64/libnvblas.so -EOMP_NUM_THREADS=8 Rscript dgemm.R 4096 40960 4096 1 Tile 8192 ngpu=4 
+      SIZE             Flops                   Time
+         4096x4096 :  285735.87 MFlops   0.481000 sec
+         8192x8192 : 1660893.70 MFlops   0.662000 sec
+       12288x12288 : 4921554.04 MFlops   0.754000 sec
+       16384x16384 : 8920986.84 MFlops   0.986000 sec
+       20480x20480 : 10852728.48 MFlops   1.583000 sec
+       24576x24576 : 14397096.97 MFlops   2.062000 sec
+       28672x28672 : 16494597.98 MFlops   2.858000 sec
+       32768x32768 : 19342700.43 MFlops   3.638000 sec
+       36864x36864 : 16793998.84 MFlops   5.966000 sec
+       40960x40960 : 17656597.31 MFlops   7.784000 sec
+jsrun -n1 -a1 -c21 -g3 -bpacked:21 -ENVBLAS_CONFIG_FILE=/gpfs/alpine/stf011/scratch/mikem/nvblas_1024.conf -ELD_PRELOAD=/sw/summit/cuda/11.1.0/lib64/libnvblas.so -EOMP_NUM_THREADS=8 Rscript dgemm.R 4096 40960 4096 1 Tile 1024 ngpu=3 
+      SIZE             Flops                   Time
+         4096x4096 : 2694881.44 MFlops   0.051000 sec
+         8192x8192 : 7530901.56 MFlops   0.146000 sec
+       12288x12288 : 8283151.21 MFlops   0.448000 sec
+       16384x16384 : 7422863.31 MFlops   1.185000 sec
+       20480x20480 : 7770180.54 MFlops   2.211000 sec
+       24576x24576 : 4894775.59 MFlops   6.065000 sec
+       28672x28672 : 4311070.97 MFlops  10.935000 sec
+       32768x32768 : 3810100.39 MFlops  18.469000 sec
+       36864x36864 : 3455765.08 MFlops  28.993000 sec
+       40960x40960 : 3242784.92 MFlops  42.383000 sec 
+jsrun -n1 -a1 -c21 -g3 -bpacked:21 -ENVBLAS_CONFIG_FILE=/gpfs/alpine/stf011/scratch/mikem/nvblas_2048.conf -ELD_PRELOAD=/sw/summit/cuda/11.1.0/lib64/libnvblas.so -EOMP_NUM_THREADS=8 Rscript dgemm.R 4096 40960 4096 1 Tile 2048 ngpu=3 
+      SIZE             Flops                   Time
+         4096x4096 : 2051327.66 MFlops   0.067000 sec
+         8192x8192 : 7429132.62 MFlops   0.148000 sec
+       12288x12288 : 11211032.46 MFlops   0.331000 sec
+       16384x16384 : 14611450.20 MFlops   0.602000 sec
+       20480x20480 : 15892570.94 MFlops   1.081000 sec
+       24576x24576 : 16934862.49 MFlops   1.753000 sec
+       28672x28672 : 15996457.77 MFlops   2.947000 sec
+       32768x32768 : 15287582.92 MFlops   4.603000 sec
+       36864x36864 : 13781705.24 MFlops   7.270000 sec
+       40960x40960 : 12541194.77 MFlops  10.959000 sec 
+jsrun -n1 -a1 -c21 -g3 -bpacked:21 -ENVBLAS_CONFIG_FILE=/gpfs/alpine/stf011/scratch/mikem/nvblas_4096.conf -ELD_PRELOAD=/sw/summit/cuda/11.1.0/lib64/libnvblas.so -EOMP_NUM_THREADS=8 Rscript dgemm.R 4096 40960 4096 1 Tile 4096 ngpu=3 
+      SIZE             Flops                   Time
+         4096x4096 : 1025663.83 MFlops   0.134000 sec
+         8192x8192 : 4997780.13 MFlops   0.220000 sec
+       12288x12288 : 9564050.89 MFlops   0.388000 sec
+       16384x16384 : 13011971.93 MFlops   0.676000 sec
+       20480x20480 : 14823010.51 MFlops   1.159000 sec
+       24576x24576 : 17090854.32 MFlops   1.737000 sec
+       28672x28672 : 17583573.68 MFlops   2.681000 sec
+       32768x32768 : 18542488.58 MFlops   3.795000 sec
+       36864x36864 : 19405964.96 MFlops   5.163000 sec
+       40960x40960 : 19766856.53 MFlops   6.953000 sec
+jsrun -n1 -a1 -c21 -g3 -bpacked:21 -ENVBLAS_CONFIG_FILE=/gpfs/alpine/stf011/scratch/mikem/nvblas_8192.conf -ELD_PRELOAD=/sw/summit/cuda/11.1.0/lib64/libnvblas.so -EOMP_NUM_THREADS=8 Rscript dgemm.R 4096 40960 4096 1 Tile 8192 ngpu=3 
+      SIZE             Flops                   Time
+         4096x4096 :  374493.06 MFlops   0.367000 sec
+         8192x8192 : 1963413.62 MFlops   0.560000 sec
+       12288x12288 : 5256163.94 MFlops   0.706000 sec
+       16384x16384 : 8441548.01 MFlops   1.042000 sec
+       20480x20480 : 11055256.88 MFlops   1.554000 sec
+       24576x24576 : 15054165.29 MFlops   1.972000 sec
+       28672x28672 : 15558270.97 MFlops   3.030000 sec
+       32768x32768 : 16270229.87 MFlops   4.325000 sec
+       36864x36864 : 17244922.04 MFlops   5.810000 sec
+       40960x40960 : 18095978.07 MFlops   7.595000 sec
+jsrun -n1 -a1 -c21 -g2 -bpacked:21 -ENVBLAS_CONFIG_FILE=/gpfs/alpine/stf011/scratch/mikem/nvblas_1024.conf -ELD_PRELOAD=/sw/summit/cuda/11.1.0/lib64/libnvblas.so -EOMP_NUM_THREADS=8 Rscript dgemm.R 4096 40960 4096 1 Tile 1024 ngpu=2 
+      SIZE             Flops                   Time
+         4096x4096 : 3196254.73 MFlops   0.043000 sec
+         8192x8192 : 6583901.96 MFlops   0.167000 sec
+       12288x12288 : 7714868.49 MFlops   0.481000 sec
+       16384x16384 : 6877320.58 MFlops   1.279000 sec
+       20480x20480 : 6362914.51 MFlops   2.700000 sec
+       24576x24576 : 5729939.00 MFlops   5.181000 sec
+       28672x28672 : 5169597.66 MFlops   9.119000 sec
+       32768x32768 : 4684691.04 MFlops  15.021000 sec
+       36864x36864 : 3217398.19 MFlops  31.141000 sec
+       40960x40960 : 3037459.19 MFlops  45.248000 sec 
+jsrun -n1 -a1 -c21 -g2 -bpacked:21 -ENVBLAS_CONFIG_FILE=/gpfs/alpine/stf011/scratch/mikem/nvblas_2048.conf -ELD_PRELOAD=/sw/summit/cuda/11.1.0/lib64/libnvblas.so -EOMP_NUM_THREADS=8 Rscript dgemm.R 4096 40960 4096 1 Tile 2048 ngpu=2 
+      SIZE             Flops                   Time
+         4096x4096 : 2545165.81 MFlops   0.054000 sec
+         8192x8192 : 6871947.67 MFlops   0.160000 sec
+       12288x12288 : 9922063.49 MFlops   0.374000 sec
+       16384x16384 : 11453246.12 MFlops   0.768000 sec
+       20480x20480 : 11938755.51 MFlops   1.439000 sec
+       24576x24576 : 12648834.24 MFlops   2.347000 sec
+       28672x28672 : 12792825.25 MFlops   3.685000 sec
+       32768x32768 : 12570336.58 MFlops   5.598000 sec
+       36864x36864 : 11608503.89 MFlops   8.631000 sec
+       40960x40960 : 10645105.22 MFlops  12.911000 sec 
+jsrun -n1 -a1 -c21 -g2 -bpacked:21 -ENVBLAS_CONFIG_FILE=/gpfs/alpine/stf011/scratch/mikem/nvblas_4096.conf -ELD_PRELOAD=/sw/summit/cuda/11.1.0/lib64/libnvblas.so -EOMP_NUM_THREADS=8 Rscript dgemm.R 4096 40960 4096 1 Tile 4096 ngpu=2 
+      SIZE             Flops                   Time
+         4096x4096 : 1334358.77 MFlops   0.103000 sec
+         8192x8192 : 5389762.88 MFlops   0.204000 sec
+       12288x12288 : 8014798.58 MFlops   0.463000 sec
+       16384x16384 : 10967697.04 MFlops   0.802000 sec
+       20480x20480 : 11392486.20 MFlops   1.508000 sec
+       24576x24576 : 12697525.21 MFlops   2.338000 sec
+       28672x28672 : 12765112.66 MFlops   3.693000 sec
+       32768x32768 : 13493527.17 MFlops   5.215000 sec
+       36864x36864 : 13672625.15 MFlops   7.328000 sec
+       40960x40960 : 13971632.96 MFlops   9.837000 sec
+jsrun -n1 -a1 -c21 -g2 -bpacked:21 -ENVBLAS_CONFIG_FILE=/gpfs/alpine/stf011/scratch/mikem/nvblas_8192.conf -ELD_PRELOAD=/sw/summit/cuda/11.1.0/lib64/libnvblas.so -EOMP_NUM_THREADS=8 Rscript dgemm.R 4096 40960 4096 1 Tile 8192 ngpu=2 
+      SIZE             Flops                   Time
+         4096x4096 :  516687.80 MFlops   0.266000 sec
+         8192x8192 : 2493223.65 MFlops   0.441000 sec
+       12288x12288 : 5622502.64 MFlops   0.660000 sec
+       16384x16384 : 8957324.87 MFlops   0.982000 sec
+       20480x20480 : 10040835.29 MFlops   1.711000 sec
+       24576x24576 : 10946465.32 MFlops   2.712000 sec
+       28672x28672 : 10902303.66 MFlops   4.324000 sec
+       32768x32768 : 13002354.80 MFlops   5.412000 sec
+       36864x36864 : 12933135.03 MFlops   7.747000 sec
+       40960x40960 : 13285544.08 MFlops  10.345000 sec 
+jsrun -n1 -a1 -c21 -g1 -bpacked:21 -ENVBLAS_CONFIG_FILE=/gpfs/alpine/stf011/scratch/mikem/nvblas_1024.conf -ELD_PRELOAD=/sw/summit/cuda/11.1.0/lib64/libnvblas.so -EOMP_NUM_THREADS=8 Rscript dgemm.R 4096 40960 4096 1 Tile 1024 ngpu=1 
+      SIZE             Flops                   Time
+         4096x4096 : 2863311.53 MFlops   0.048000 sec
+         8192x8192 : 4278255.36 MFlops   0.257000 sec
+       12288x12288 : 4592638.30 MFlops   0.808000 sec
+       16384x16384 : 4228890.88 MFlops   2.080000 sec
+       20480x20480 : 4233580.38 MFlops   4.058000 sec
+       24576x24576 : 3504109.30 MFlops   8.472000 sec
+       28672x28672 : 3100398.62 MFlops  15.205000 sec
+       32768x32768 : 2738616.24 MFlops  25.695000 sec
+       36864x36864 : 1998503.95 MFlops  50.134000 sec
+       40960x40960 : 1903507.52 MFlops  72.203000 sec 
+jsrun -n1 -a1 -c21 -g1 -bpacked:21 -ENVBLAS_CONFIG_FILE=/gpfs/alpine/stf011/scratch/mikem/nvblas_2048.conf -ELD_PRELOAD=/sw/summit/cuda/11.1.0/lib64/libnvblas.so -EOMP_NUM_THREADS=8 Rscript dgemm.R 4096 40960 4096 1 Tile 2048 ngpu=1 
+      SIZE             Flops                   Time
+         4096x4096 : 2694881.44 MFlops   0.051000 sec
+         8192x8192 : 4975165.74 MFlops   0.221000 sec
+       12288x12288 : 6215832.07 MFlops   0.597000 sec
+       16384x16384 : 6608634.88 MFlops   1.331000 sec
+       20480x20480 : 6671793.86 MFlops   2.575000 sec
+       24576x24576 : 6910338.44 MFlops   4.296000 sec
+       28672x28672 : 6958163.99 MFlops   6.775000 sec
+       32768x32768 : 6978257.06 MFlops  10.084000 sec
+       36864x36864 : 7008953.98 MFlops  14.295000 sec
+       40960x40960 : 6691934.63 MFlops  20.538000 sec 
+jsrun -n1 -a1 -c21 -g1 -bpacked:21 -ENVBLAS_CONFIG_FILE=/gpfs/alpine/stf011/scratch/mikem/nvblas_4096.conf -ELD_PRELOAD=/sw/summit/cuda/11.1.0/lib64/libnvblas.so -EOMP_NUM_THREADS=8 Rscript dgemm.R 4096 40960 4096 1 Tile 4096 ngpu=1 
+      SIZE             Flops                   Time
+         4096x4096 : 1832519.38 MFlops   0.075000 sec
+         8192x8192 : 4433514.63 MFlops   0.248000 sec
+       12288x12288 : 6014346.42 MFlops   0.617000 sec
+       16384x16384 : 6574060.55 MFlops   1.338000 sec
+       20480x20480 : 6750439.76 MFlops   2.545000 sec
+       24576x24576 : 7004911.27 MFlops   4.238000 sec
+       28672x28672 : 7095358.37 MFlops   6.644000 sec
+       32768x32768 : 7190756.61 MFlops   9.786000 sec
+       36864x36864 : 7266153.97 MFlops  13.789000 sec
+       40960x40960 : 7330077.52 MFlops  18.750000 sec 
+jsrun -n1 -a1 -c21 -g1 -bpacked:21 -ENVBLAS_CONFIG_FILE=/gpfs/alpine/stf011/scratch/mikem/nvblas_8192.conf -ELD_PRELOAD=/sw/summit/cuda/11.1.0/lib64/libnvblas.so -EOMP_NUM_THREADS=8 Rscript dgemm.R 4096 40960 4096 1 Tile 8192 ngpu=1 
+      SIZE             Flops                   Time
+         4096x4096 :  848388.60 MFlops   0.162000 sec
+         8192x8192 : 3352169.60 MFlops   0.328000 sec
+       12288x12288 : 5083358.55 MFlops   0.730000 sec
+       16384x16384 : 6138236.58 MFlops   1.433000 sec
+       20480x20480 : 6240417.43 MFlops   2.753000 sec
+       24576x24576 : 6843433.37 MFlops   4.338000 sec
+       28672x28672 : 6724901.72 MFlops   7.010000 sec
+       32768x32768 : 7089335.50 MFlops   9.926000 sec
+       36864x36864 : 6964618.18 MFlops  14.386000 sec
+       40960x40960 : 7250037.11 MFlops  18.957000 sec 
